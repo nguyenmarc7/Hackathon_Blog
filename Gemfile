@@ -36,7 +36,7 @@ end
 gem 'better_errors', '~> 2.8', '>= 2.8.3'
 
 # bulma css
-gem 'bulma-rails', '~> 0.0.4.1'
+# gem 'bulma-rails', '~> 0.0.4.1'
 
 
 
