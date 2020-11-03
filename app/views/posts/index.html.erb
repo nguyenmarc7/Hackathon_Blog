@@ -2,6 +2,7 @@
 
 
 <section class="section">
+
     <div class="container">
         <% @posts.each do |post| %>
             <div class="">
@@ -14,9 +15,11 @@
                 <div class="content">
                     <%= post.content %>
             </div>
+            
          <!--   <div class="comment-count">
                 <span class="tag is-rounded"><%#comment counts%></span>
         </div> -->
+        
     </div>
     </div>
  <% end %>
