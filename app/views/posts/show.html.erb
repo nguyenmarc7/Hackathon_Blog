@@ -2,12 +2,14 @@
     <div class="container">
 
         <h1 class="title"><%= @post.title %> </h1>
-
         <div class="content">
                 <%= @post.content %>
         </div>
-        </div>
+        <p>created by: <%= @post.user.fullname %> </p>
 
+        
+        </div>
+   <% if @post.user == current_user %>
         <nav class="level">
                 <div class="level-left">
                         <p class="level-item">
@@ -24,6 +26,7 @@
                         </p>
                 </div>
         </nav>
+<% end %>
 </section>
 
 <section class="section-comments">
@@ -32,8 +35,14 @@
 		<%= render @post.comments %>
 		<div class="comment-form">
 			<hr />
+                        <% if(user_signed_in? ) %>
 			<h3 class="subtitle is-3">Leave a reply</h3>
+                        
 	 		<%= render 'comments/form' %>
+                         <% end %>
 		</div>
+
+         
+             
 	</div>
 </section>
