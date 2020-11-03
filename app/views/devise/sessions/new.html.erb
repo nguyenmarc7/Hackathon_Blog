@@ -23,6 +23,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <!------ Include the above in your HEAD tag ---------->
 <body>
@@ -32,7 +33,7 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+       <i class="fas fa-user-circle fa-5x" id="icon" alt="User Icon"></i> 
     </div>
 
     <!-- Login Form -->
@@ -42,10 +43,14 @@
         <%= f.input :email,
                     required: false,
                     autofocus: true,
-                    input_html: { autocomplete: "email" } %>
+                    label: false,
+                    placeholder: 'Email',
+                    input_html: { class: 'form_text', autocomplete: "email" } %>
         <%= f.input :password,
                     required: false,
-                    input_html: { autocomplete: "current-password" } %>
+                    label: false,
+                    placeholder: 'Password',
+                    input_html: { class: 'form_text', autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
     
