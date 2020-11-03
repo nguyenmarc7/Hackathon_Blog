@@ -4,6 +4,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+  <div class="form-group">
+  <%= f.text_field :fullname, :class => 'form-control', :placeholder => 'Full Name', autofocus: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
